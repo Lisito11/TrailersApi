@@ -10,6 +10,12 @@ namespace TrailersApi.Helpers {
     public class AutoMapperProfiles: Profile {
         public AutoMapperProfiles() {
             CreateMap<UserTrailer, UserInfo>().ReverseMap();
+
+
+            CreateMap<Trailer, TrailersDTO>().ReverseMap();
+            CreateMap<Trailer, TrailersCreacionDTO>().ReverseMap();
+            CreateMap<TrailersCreacionDTO, Trailer>();
+
         }
     }
 }
